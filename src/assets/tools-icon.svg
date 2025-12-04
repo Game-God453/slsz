@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 铅笔 -->
+  <g transform="translate(20, 30)">
+    <rect x="5" y="0" width="10" height="60" fill="#4a90e2" rx="2" ry="2" />
+    <polygon points="10,0 5,10 15,10" fill="#f5a623" />
+    <polygon points="5,60 15,60 15,70 5,70" fill="#e0e0e0" />
+  </g>
+  
+  <!-- 尺子 -->
+  <g transform="translate(50, 40)">
+    <rect x="0" y="0" width="60" height="15" fill="#f5a623" rx="2" ry="2" />
+    <line x1="5" y1="0" x2="5" y2="5" stroke="#4a90e2" stroke-width="1" />
+    <line x1="15" y1="0" x2="15" y2="8" stroke="#4a90e2" stroke-width="1" />
+    <line x1="25" y1="0" x2="25" y2="5" stroke="#4a90e2" stroke-width="1" />
+    <line x1="35" y1="0" x2="35" y2="8" stroke="#4a90e2" stroke-width="1" />
+    <line x1="45" y1="0" x2="45" y2="5" stroke="#4a90e2" stroke-width="1" />
+    <line x1="55" y1="0" x2="55" y2="8" stroke="#4a90e2" stroke-width="1" />
+  </g>
+  
+  <!-- 手机 -->
+  <g transform="translate(130, 30)">
+    <rect x="0" y="0" width="30" height="60" fill="#9b9b9b" rx="3" ry="3" />
+    <rect x="3" y="5" width="24" height="45" fill="#4a90e2" />
+    <circle cx="15" cy="55" r="3" fill="#f5f5f5" />
+  </g>
+  
+  <!-- 黄色笔 -->
+  <g transform="translate(20, 110)">
+    <rect x="0" y="0" width="60" height="8" fill="#f5a623" rx="1" ry="1" />
+    <polygon points="60,4 70,0 70,8" fill="#f5a623" />
+  </g>
+  
+  <!-- 直尺 -->
+  <g transform="translate(100, 120)">
+    <rect x="0" y="0" width="80" height="10" fill="#d8d8d8" />
+    <line x1="5" y1="0" x2="5" y2="5" stroke="#4a4a4a" stroke-width="1" />
+    <line x1="15" y1="0" x2="15" y2="5" stroke="#4a4a4a" stroke-width="1" />
+    <line x1="25" y1="0" x2="25" y2="5" stroke="#4a4a4a" stroke-width="1" />
+    <line x1="35" y1="0" x2="35" y2="5" stroke="#4a4a4a" stroke-width="1" />
+    <line x1="45" y1="0" x2="45" y2="5" stroke="#4a4a4a" stroke-width="1" />
+    <line x1="55" y1="0" x2="55" y2="5" stroke="#4a4a4a" stroke-width="1" />
+    <line x1="65" y1="0" x2="65" y2="5" stroke="#4a4a4a" stroke-width="1" />
+    <line x1="75" y1="0" x2="75" y2="5" stroke="#4a4a4a" stroke-width="1" />
+  </g>
+</svg>
