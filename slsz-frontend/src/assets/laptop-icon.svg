@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150">
+  <!-- 笔记本电脑屏幕 -->
+  <rect x="25" y="10" width="150" height="100" rx="5" ry="5" fill="#e0e0e0" />
+  <rect x="30" y="15" width="140" height="90" fill="#4a90e2" />
+  
+  <!-- 笔记本电脑键盘部分 -->
+  <path d="M15,110 L185,110 L195,140 L5,140 Z" fill="#9b9b9b" />
+  
+  <!-- 触控板 -->
+  <rect x="75" y="115" width="50" height="20" rx="2" ry="2" fill="#d8d8d8" />
+  
+  <!-- 键盘按键 -->
+  <g fill="#f5f5f5">
+    <rect x="30" y="115" width="8" height="5" rx="1" ry="1" />
+    <rect x="40" y="115" width="8" height="5" rx="1" ry="1" />
+    <rect x="50" y="115" width="8" height="5" rx="1" ry="1" />
+    <rect x="60" y="115" width="8" height="5" rx="1" ry="1" />
+    <rect x="30" y="122" width="8" height="5" rx="1" ry="1" />
+    <rect x="40" y="122" width="8" height="5" rx="1" ry="1" />
+    <rect x="50" y="122" width="8" height="5" rx="1" ry="1" />
+    <rect x="60" y="122" width="8" height="5" rx="1" ry="1" />
+    <rect x="130" y="115" width="8" height="5" rx="1" ry="1" />
+    <rect x="140" y="115" width="8" height="5" rx="1" ry="1" />
+    <rect x="150" y="115" width="8" height="5" rx="1" ry="1" />
+    <rect x="160" y="115" width="8" height="5" rx="1" ry="1" />
+    <rect x="130" y="122" width="8" height="5" rx="1" ry="1" />
+    <rect x="140" y="122" width="8" height="5" rx="1" ry="1" />
+    <rect x="150" y="122" width="8" height="5" rx="1" ry="1" />
+    <rect x="160" y="122" width="8" height="5" rx="1" ry="1" />
+  </g>
+  
+  <!-- 屏幕内容 -->
+  <g transform="translate(50, 30)">
+    <!-- 标题栏 -->
+    <rect x="0" y="0" width="100" height="10" fill="#ffffff" opacity="0.3" />
+    
+    <!-- 内容区域 -->
+    <rect x="0" y="15" width="40" height="5" fill="#ffffff" opacity="0.5" />
+    <rect x="0" y="25" width="100" height="5" fill="#ffffff" opacity="0.5" />
+    <rect x="0" y="35" width="80" height="5" fill="#ffffff" opacity="0.5" />
+    <rect x="0" y="45" width="90" height="5" fill="#ffffff" opacity="0.5" />
+    
+    <!-- 按钮 -->
+    <rect x="0" y="60" width="30" height="10" rx="2" ry="2" fill="#f5a623" />
+  </g>
+</svg>
