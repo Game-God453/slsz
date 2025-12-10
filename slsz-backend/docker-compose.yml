@@ -1,0 +1,68 @@
+services:
+  mysql:
+    image: mysql:8.0.24
+    expose:
+      - "3306"
+    ports:
+      - "3306:3306"
+    restart: always
+    container_name: "slsz-mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: SLSZ12345678
+      MYSQL_DATABASE: slsz
+      MYSQL_USER: gameGod
+      MYSQL_PASSWORD: SLSZ12345678
+      MYSQL_DEFAULT_AUTHENTICATION_PLUGIN: mysql_native_password
+    networks:
+      - app-net
+    command:
+      - --bind-address=0.0.0.0
+      - --pid-file=/var/run/mysqld/mysqld.pid  # 修复PID文件路径权限
+    volumes:
+      - ./data/mysql:/var/lib/mysql:z
+
+
+  redis:
+    image: redis:latest
+    container_name: "slsz-redis"
+    expose:
+      - "6379"
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./data/redis:/data
+    command: redis-server --requirepass SLSZ12345678 --appendonly yes --dir /data
+#      - ./redis.conf:/etc/redis/redis.conf
+#    command: redis-server /etc/redis/redis.conf
+    environment:
+      - REDIS_PASSWORD=SLSZ12345678
+    restart: always  # 设置重启策略为 always
+    networks:
+      - app-net
+
+  web:
+    build:
+      context: .
+    ports:
+       - "8000:8000"   #主机端口和容器端口映射，要和下面的uwsgi.ini文件中的socket保持一致
+    command: ./start.sh
+    working_dir: /etc/uwsgi/slsz
+    volumes:
+      - .:/etc/uwsgi/slsz
+    expose:
+      - "8000"
+    container_name: "slsz-django"
+    depends_on:
+      - mysql
+      - redis
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "slsz-mysql"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - app-net
+
+networks:
+  app-net:
+    driver: bridge
